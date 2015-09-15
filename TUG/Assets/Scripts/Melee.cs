@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Melee : BaseUnit
 {
+
+	public void Start()
+	{
+		
+	}
 	protected override void attack (BaseUnit enemy)
 	{
 		enemy.takeDmg(attackDmg);

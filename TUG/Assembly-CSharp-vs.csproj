@@ -47,8 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BaseUnit.cs" />
+     <Compile Include="Assets\Scripts\LoadGameScene.cs" />
      <Compile Include="Assets\Scripts\Melee.cs" />
+     <Compile Include="Assets\Scripts\SpawnTimer.cs" />
+     <Compile Include="Assets\Scripts\SpawnUnit.cs" />
      <Compile Include="Assets\Scripts\UnitPathfinding.cs" />
+     <Compile Include="Assets\Scripts\UnitSpot.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
