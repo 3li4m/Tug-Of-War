@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class UnitPathfinding : MonoBehaviour // NEEDS TO BE NETWORK BEHAVIOUR
@@ -14,7 +14,8 @@ public class UnitPathfinding : MonoBehaviour // NEEDS TO BE NETWORK BEHAVIOUR
 	{
 		myBase = GetComponent<BaseUnit>();
 		myNavmeshAgent = GetComponent<NavMeshAgent>();
-	}
+        GetComponent<UnitPathfinding>().enabled = false;
+    }
 	
 	void Update () 
 	{

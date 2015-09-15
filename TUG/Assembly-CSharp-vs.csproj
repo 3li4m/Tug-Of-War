@@ -47,7 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BaseUnit.cs" />
+     <Compile Include="Assets\Scripts\Editor Scripts\ApplyColliders.cs" />
+     <Compile Include="Assets\Scripts\Editor Scripts\ApplyRigidbodies.cs" />
      <Compile Include="Assets\Scripts\Melee.cs" />
+     <Compile Include="Assets\Scripts\Test Scripts\DestroyOnContact.cs" />
+     <Compile Include="Assets\Scripts\Test Scripts\MouseShoot.cs" />
+     <Compile Include="Assets\Scripts\Test Scripts\Rebuild.cs" />
+     <Compile Include="Assets\Scripts\Test Scripts\RebuildMaster.cs" />
      <Compile Include="Assets\Scripts\UnitPathfinding.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
