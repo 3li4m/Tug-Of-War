@@ -1,0 +1,26 @@
+Sprint 1
+-------------
+Enemy AI
+- Attacking
+- Pathfinding
+
+Place Unit 
+
+Sprint 2
+------------
+when holding middle the player gets more points quicker
+GameManager (when timer reaches 0 sends units to platform infront of there formaiton)
+Move Screen with mouse 
+Select different units and place them 
+
+Sprint 3
+------------
+Money (increase over time)
+Tower  (1st base 2nd base)
+Grid Placement
+Unit price (deduct money when unit is placed)
+
+Sprint 4
+----------
+3 lanes 
+objectives 
