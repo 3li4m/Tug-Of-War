@@ -1,0 +1,29 @@
+Gid placement
+--------------
+- select a placement spot with the mouse
+- check if it is empty
+- if not allow the player to place a unit there
+- then set the spot to not empty 
+
+variables
+---------
+isSpotTaken
+placeToSpawnUnit
+units
+unitIndex
+layerMask
+
+Behaviours
+----------
+checksSpot(layerMask)
+{
+	shoot a ray through the mouse 
+	if the ray hits something on the layermask
+		if the thing we hit has the spotScript on it
+			run place unit
+}
+
+PlaceUnit(gameobject transform)
+{
+
+}

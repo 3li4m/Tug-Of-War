@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\BaseUnit.cs">
+    <Files>
+      <File FileName="Assets\Melee.cs" Line="8" Column="28" />
+      <File FileName="Assets\BaseUnit.cs" Line="9" Column="21" />
+      <File FileName="Assets\UnitPathfinding.cs" Line="4" Column="78" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
