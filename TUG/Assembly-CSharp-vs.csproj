@@ -47,20 +47,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BaseUnit.cs" />
-<<<<<<< HEAD
      <Compile Include="Assets\Scripts\Editor Scripts\ApplyColliders.cs" />
      <Compile Include="Assets\Scripts\Editor Scripts\ApplyRigidbodies.cs" />
-     <Compile Include="Assets\Scripts\Melee.cs" />
-     <Compile Include="Assets\Scripts\Test Scripts\DestroyOnContact.cs" />
-     <Compile Include="Assets\Scripts\Test Scripts\MouseShoot.cs" />
-     <Compile Include="Assets\Scripts\Test Scripts\Rebuild.cs" />
-     <Compile Include="Assets\Scripts\Test Scripts\RebuildMaster.cs" />
-=======
      <Compile Include="Assets\Scripts\LoadGameScene.cs" />
      <Compile Include="Assets\Scripts\Melee.cs" />
      <Compile Include="Assets\Scripts\SpawnTimer.cs" />
      <Compile Include="Assets\Scripts\SpawnUnit.cs" />
->>>>>>> 77aa1e26f78206229a7823c2295e3f5797682b03
+     <Compile Include="Assets\Scripts\Test Scripts\DestroyOnContact.cs" />
+     <Compile Include="Assets\Scripts\Test Scripts\MouseShoot.cs" />
+     <Compile Include="Assets\Scripts\Test Scripts\Rebuild.cs" />
+     <Compile Include="Assets\Scripts\Test Scripts\RebuildMaster.cs" />
      <Compile Include="Assets\Scripts\UnitPathfinding.cs" />
      <Compile Include="Assets\Scripts\UnitSpot.cs" />
  <Reference Include="UnityEngine.UI">
