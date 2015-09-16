@@ -88,10 +88,12 @@ public class Rebuild : MonoBehaviour
         
         timer += Time.deltaTime;
 
-        if (transform.position == originalPos && transform.rotation == originalRot || timer > 2f)
+        if (transform.position == originalPos && transform.rotation == originalRot || timer > 2.5f)
         {
             timer = 0;
             rb.isKinematic = true;
+            transform.position = originalPos;
+            transform.rotation = originalRot;
             isDead = false;
             health = originalHealth;
             reforming = false;
