@@ -14,7 +14,7 @@ public class UnitPathfinding : MonoBehaviour // NEEDS TO BE NETWORK BEHAVIOUR
 	{
 		myBase = GetComponent<BaseUnit>();
 		myNavmeshAgent = GetComponent<NavMeshAgent>();
-        GetComponent<UnitPathfinding>().enabled = false;
+        //GetComponent<UnitPathfinding>().enabled = false;
     }
 	
 	void Update () 
@@ -48,7 +48,7 @@ public class UnitPathfinding : MonoBehaviour // NEEDS TO BE NETWORK BEHAVIOUR
 		{
 			if (agrodUnit == null)// check if im attacking something
 			{
-				if (!myBase.checkTeam (newAgro)); // check if its on the enemy team
+				if (!myBase.checkTeam (newAgro)) // check if its on the enemy team
 				{
 					agrodUnit = newAgro; // store agroed unit into the new agro
 				}

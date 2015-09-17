@@ -15,12 +15,14 @@ public class LoadGameScene : MonoBehaviour
 	
 	public void LoadLevelAsTeam1() 
 	{
+		// sets players team to 1 if button one is pressed
 		Application.LoadLevel("Test Scene");
 		unitTeam.team = 1;
 	}
 	
 	public void LoadLevelAsTeam2()
 	{
+		// sets players team to 2 if button is pressed
 		Application.LoadLevel("Test Scene");
 		unitTeam.team = 2;
 	}

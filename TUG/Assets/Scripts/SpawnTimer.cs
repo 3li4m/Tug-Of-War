@@ -9,6 +9,8 @@ public class SpawnTimer : MonoBehaviour
 	public Transform spot3;
 	public BaseUnit unitTeam;
 	
+	
+	
 	void Start () 
 	{
 		unit = GetComponent<SpawnUnit>();
@@ -24,13 +26,13 @@ public class SpawnTimer : MonoBehaviour
 		{
 			if (unitTeam.team == 1)
 			{
-				Instantiate (unit.unit, spot2.transform.position, spot2.transform.rotation);
-				timer = 50;
+				Instantiate (unit.unit, spot2.transform.position, spot2.transform.rotation); // spawns unit onto quad infront of team 1s base 
+				timer = 10;
 			}
-			else if (unitTeam.team == 2)
+			else if (unitTeam.team == 2) 
 			{
-				Instantiate (unit.unit, spot3.transform.position, spot3.transform.rotation);
-				timer = 50;
+				Instantiate (unit.unit, spot3.transform.position, spot3.transform.rotation); // spawns unit onto quad infront of team 2s base 
+				timer = 10;
 			}
 		}
 	}

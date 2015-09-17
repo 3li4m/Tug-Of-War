@@ -23,7 +23,6 @@ public class SpawnUnit : MonoBehaviour
 	{
 		Instantiate (unit, spot.transform.position, spot.transform.rotation);
 		spot.isTaken = true;
-		GetComponent<UnitPathfinding>().enabled = false;
 	}
 	
 	void checkSpot()

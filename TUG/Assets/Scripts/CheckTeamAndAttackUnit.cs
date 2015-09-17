@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Melee : BaseUnit
+public class CheckTeamAndAttackUnit : BaseUnit
 {
 
 	public void Start()
