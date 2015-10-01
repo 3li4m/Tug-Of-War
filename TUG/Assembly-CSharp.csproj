@@ -50,8 +50,8 @@
      <Compile Include="Assets\Scripts\DamagableEntity.cs" />
      <Compile Include="Assets\Scripts\Editor Scripts\ApplyColliders.cs" />
      <Compile Include="Assets\Scripts\Editor Scripts\ApplyRigidbodies.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\LoadGameScene.cs" />
+     <Compile Include="Assets\Scripts\ManagerScripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MeleUnit.cs" />
      <Compile Include="Assets\Scripts\SpawnTimer.cs" />
      <Compile Include="Assets\Scripts\SpawnUnit.cs" />

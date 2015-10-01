@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour //ALL static events will be contained w
 	private void Start()
 	{
 		unitSpawnRateLocal = unitSpawnRate;//so the rate is a constant
-		StartCoroutine (spawnWaves);
+		StartCoroutine (spawnWaves());
 	}
 
 	private IEnumerator spawnWaves()
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour //ALL static events will be contained w
 		while (gameRunning == true) 
 		{
 			spawnUnits();
-			yield return WaitForSeconds(unitSpawnRateLocal);
+			yield return new WaitForSeconds(unitSpawnRateLocal);
 		}
 	}
 
