@@ -1,26 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CheckTeamAndAttackUnit : BaseUnit
+[RequireComponent(typeof(DamagableEntity))] //no invulrable mele units for now
+public class MeleUnit : BaseUnit
 {
 
-	public void Start()
+
+	protected override void attack (DamagableEntity enemy)
 	{
-		
-	}
-	protected override void attack (BaseUnit enemy)
-	{
-		enemy.takeDmg(attackDmg);
+		enemy.takeDmg(attackDmg);//the meles implimentation of attack
 	}
 	
 	private void attackOnCollision(Collision other)
 	{
 		BaseUnit otherUnit = other.gameObject.GetComponent<BaseUnit>();// stores the base unit of what ever you hit
-		if (otherUnit != null)// if the unit stored exists
+		DamagableEntity otherUnitDamage = other.gameObject.GetComponent<DamagableEntity>();
+		if (otherUnit != null && otherUnitDamage != null)// if the unit stored exists
 		{
 			if (!checkTeam (otherUnit))//checks if its not on your team
 			{
-				attack (otherUnit);//passes it to the attack function
+				attack (otherUnitDamage);//passes it to the attack function
 			}
 		}
 	}

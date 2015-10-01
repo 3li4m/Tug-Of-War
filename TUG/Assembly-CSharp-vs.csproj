@@ -47,12 +47,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BaseUnit.cs" />
-     <Compile Include="Assets\Scripts\CheckTeamAndAttackUnit.cs" />
+     <Compile Include="Assets\Scripts\DamagableEntity.cs" />
      <Compile Include="Assets\Scripts\Editor Scripts\ApplyColliders.cs" />
      <Compile Include="Assets\Scripts\Editor Scripts\ApplyRigidbodies.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\LoadGameScene.cs" />
+     <Compile Include="Assets\Scripts\MeleUnit.cs" />
      <Compile Include="Assets\Scripts\SpawnTimer.cs" />
      <Compile Include="Assets\Scripts\SpawnUnit.cs" />
+     <Compile Include="Assets\Scripts\Structures\Base.cs" />
      <Compile Include="Assets\Scripts\Test Scripts\DestroyOnContact.cs" />
      <Compile Include="Assets\Scripts\Test Scripts\MouseShoot.cs" />
      <Compile Include="Assets\Scripts\Test Scripts\Rebuild.cs" />

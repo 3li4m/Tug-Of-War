@@ -1,8 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Desktop\PRG3\Assets\DamagableEntity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MeleUnit.cs">
     <Files>
-      <File FileName="..\..\..\Desktop\PRG3\Assets\DamagableEntity.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Structures\Base.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SpawnUnit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SpawnTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MeleUnit.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
