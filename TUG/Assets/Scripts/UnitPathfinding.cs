@@ -1,7 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class UnitPathfinding : MonoBehaviour // NEEDS TO BE NETWORK BEHAVIOUR
+[RequireComponent(typeof(BaseUnit))]
+[RequireComponent(typeof(NavMeshAgent))]
+public class UnitPathfinding : MonoBehaviour 
 {
 	private NavMeshAgent myNavmeshAgent;
 	public Transform destanation;
@@ -14,7 +16,6 @@ public class UnitPathfinding : MonoBehaviour // NEEDS TO BE NETWORK BEHAVIOUR
 	{
 		myBase = GetComponent<BaseUnit>();
 		myNavmeshAgent = GetComponent<NavMeshAgent>();
-        //GetComponent<UnitPathfinding>().enabled = false;
     }
 	
 	void Update () 

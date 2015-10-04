@@ -51,17 +51,17 @@
      <Compile Include="Assets\Scripts\Editor Scripts\ApplyColliders.cs" />
      <Compile Include="Assets\Scripts\Editor Scripts\ApplyRigidbodies.cs" />
      <Compile Include="Assets\Scripts\LoadGameScene.cs" />
-     <Compile Include="Assets\Scripts\ManagerScripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\ManagerScripts\GridManager.cs" />
+     <Compile Include="Assets\Scripts\ManagerScripts\InputManager.cs" />
+     <Compile Include="Assets\Scripts\ManagerScripts\UnitPrefabManager.cs" />
+     <Compile Include="Assets\Scripts\ManagerScripts\WaveManager.cs" />
      <Compile Include="Assets\Scripts\MeleUnit.cs" />
-     <Compile Include="Assets\Scripts\SpawnTimer.cs" />
-     <Compile Include="Assets\Scripts\SpawnUnit.cs" />
      <Compile Include="Assets\Scripts\Structures\Base.cs" />
      <Compile Include="Assets\Scripts\Test Scripts\DestroyOnContact.cs" />
      <Compile Include="Assets\Scripts\Test Scripts\MouseShoot.cs" />
      <Compile Include="Assets\Scripts\Test Scripts\Rebuild.cs" />
      <Compile Include="Assets\Scripts\Test Scripts\RebuildMaster.cs" />
      <Compile Include="Assets\Scripts\UnitPathfinding.cs" />
-     <Compile Include="Assets\Scripts\UnitSpot.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

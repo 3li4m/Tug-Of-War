@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameManager : MonoBehaviour //ALL static events will be contained within this script aditonaly the win codions should be handled here
+public class WaveManager : MonoBehaviour //ALL static events will be contained within this script aditonaly the win codions should be handled here
 {
 	public delegate void GameManagerEventVoid();
 	public GameManagerEventVoid spawnUnits;
@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour //ALL static events will be contained w
 	private bool gameRunning = true;//when this is turned off the bases will stop spawning
 
 	public float unitSpawnRate;//inspector variable
-	private float unitSpawnRateLocal;//real variable
+	private float unitSpawnRateLocal;//real local variable
 
 	private void Start()
 	{
@@ -21,13 +21,16 @@ public class GameManager : MonoBehaviour //ALL static events will be contained w
 	{
 		while (gameRunning == true) 
 		{
-			spawnUnits();
+			if(spawnUnits != null)
+			{
+			   spawnUnits();
+			}
 			yield return new WaitForSeconds(unitSpawnRateLocal);
 		}
 	}
 
-	public static GameManager findGameManager()//so we can acces the game manager
+	public static WaveManager findGameManager()//so we can acces the game manager
 	{
-		return GameObject.FindObjectOfType<GameManager> ();
+		return GameObject.FindObjectOfType<WaveManager>();
 	}
 }

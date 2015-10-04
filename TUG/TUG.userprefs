@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ManagerScripts\GridManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameManager.cs" Line="24" Column="17" />
+      <File FileName="Assets\Scripts\ManagerScripts\GridManager.cs" Line="52" Column="1" />
+      <File FileName="Assets\Scripts\Structures\Base.cs" Line="73" Column="1" />
+      <File FileName="Assets\Scripts\UnitPathfinding.cs" Line="10" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
