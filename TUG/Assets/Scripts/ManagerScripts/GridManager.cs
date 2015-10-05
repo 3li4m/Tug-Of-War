@@ -7,21 +7,21 @@ public class GridManager : MonoBehaviour
 	//tell the base the world coords of the cells
 	public Collider myGrid;
 	public Base myBase;
+
 	public void checkCell()//raycast and find if we are hitting a cell
 	{
 		Ray myRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hitInfo;
-		if(myGrid.Raycast(myRay,out hitInfo,Mathf.Infinity))
-		{
-			if(hitInfo.collider == myGrid)//if we hit the correct grid
-			{
-				Vector3 localCoord =  hitInfo.point -myGrid.transform.position;
+		if (myGrid.Raycast (myRay, out hitInfo, Mathf.Infinity)) {
+			if (hitInfo.collider == myGrid) {//if we hit the correct grid
+				Vector3 localCoord = hitInfo.point - myGrid.transform.position;
 				myBase.addUnit(getRatioFormLocal(localCoord));
-				//send to a ui here(tip using the gitinfo.point and placing a gizmo or such will place it at the mouses click area to allign to grid simpily round)
-			}
-		}
-	}
 
+
+			}
+		} 
+
+	}
 
 	Vector2 getRatioFormLocal(Vector3 local)
 	{
@@ -47,8 +47,9 @@ public class GridManager : MonoBehaviour
 
 		ratio.x -= myGrid.bounds.extents.x;
 		ratio.y -= myGrid.bounds.extents.z;
-		return new Vector3 (ratio.x, myGrid.transform.position.y, ratio.y);
+		return new Vector3 (ratio.x, 0, ratio.y) + myGrid.transform.position;
 	}
+
 
 
  

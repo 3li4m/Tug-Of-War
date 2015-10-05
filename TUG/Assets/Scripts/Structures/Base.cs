@@ -10,6 +10,8 @@ public class Base : MonoBehaviour
 	protected UnitPrefabManager unitPrefabManager;
 	public GridManager gridManager;
 	public Transform enemyBase;
+	public int selectedUnit;
+	public BasePlacementUi baseUi;
 	private void Start() //will add this bases spawn wave so it will be called every time the game manager deems necicary
 	{
 		WaveManager.findGameManager ().spawnUnits += spawnWave;
@@ -34,7 +36,7 @@ public class Base : MonoBehaviour
 
 	GameObject getNextUnit(int x, int z)
 	{
-		if (unitIndexes [x, z] != empty)
+		if (unitIndexes [x, z] != empty)//so we dont go over the array bounds
 		{
 			return unitPrefabManager.getPrefab (unitIndexes [x, z], null);
 		}
@@ -56,20 +58,20 @@ public class Base : MonoBehaviour
 	}
 	public void addUnit(Vector2 cell)//an economy class should be between here and acutaly modifying the grid
 	{								//aditionaly there is no current selected unit option
-		cell.x = Mathf.RoundToInt(cell.x * sizeX);
-		cell.y = Mathf.RoundToInt(cell.y * sizeZ);
-
-		if (unitIndexes [(int)cell.x, (int)cell.y] == empty) 
+		int x = Mathf.RoundToInt(cell.x * (sizeX -1)); //-1 because 1* size x will be out of the array bounds
+		int y = Mathf.RoundToInt(cell.y * (sizeZ -1));
+		baseUi.drawSelected (getGridWorld(x, y));
+		if (unitIndexes [x, y] == empty) 
 		{
-			unitIndexes [(int)cell.x, (int)cell.y] = 0;
-			print ("unit index added: " + unitIndexes [(int)cell.x, (int)cell.y]);
+			unitIndexes [(int)cell.x, (int)cell.y] = selectedUnit;
+			print ("unit added at: X:"+x + "Y: "+y);
 		}
 	}
-	Vector3 getGridWorld(int x, int z)
+	Vector3 getGridWorld(int x, int y)
 	{
 		x = x / sizeX;
-		z = z / sizeZ;
+		y = y / sizeZ;
 
-		return gridManager.worldAtRatio (new Vector2 (x,z));
+		return gridManager.worldAtRatio (new Vector2 (x,y));
 	}
 }
