@@ -47,14 +47,14 @@ public class GridManager : MonoBehaviour
 
 		ratio.x -= myGrid.bounds.extents.x;
 		ratio.y -= myGrid.bounds.extents.z;
-		return new Vector3 (ratio.x, 0, ratio.y) + myGrid.transform.position;
+		print(new Vector3 (ratio.x, 0, ratio.y));
+		return new Vector3 (ratio.x, 0, ratio.y) + myGrid.transform.position; //may not be 0 we will see
 	}
 
-
-
- 
-
-
+	public Vector3 worldAtRatio(Vector2 ratio, Vector3 offset)
+	{
+		return worldAtRatio(ratio) - myGrid.transform.position + offset;
+	}
 
 
 

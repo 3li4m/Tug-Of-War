@@ -6,6 +6,7 @@ public class BasePlacementUi : MonoBehaviour
 {
 	public GameObject selectedGizmoPrefab;
 	GameObject selectedGizmoWorld;
+
 	void Start()
 	{
 		selectedGizmoWorld = Instantiate (selectedGizmoPrefab, Vector3.zero, Quaternion.identity)as GameObject;

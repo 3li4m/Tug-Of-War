@@ -12,6 +12,8 @@ public class Base : MonoBehaviour
 	public Transform enemyBase;
 	public int selectedUnit;
 	public BasePlacementUi baseUi;
+	public Transform spawnOffset;
+
 	private void Start() //will add this bases spawn wave so it will be called every time the game manager deems necicary
 	{
 		WaveManager.findGameManager ().spawnUnits += spawnWave;
@@ -27,7 +29,7 @@ public class Base : MonoBehaviour
 				GameObject nextUnit = getNextUnit(x,z);
 				if(nextUnit != null)
 				{
-					GameObject unit = Instantiate(nextUnit,getGridWorld(x,z),nextUnit.transform.rotation)as GameObject;//no clue where to spawn
+					GameObject unit = Instantiate(nextUnit,getGridWorld(x,z,spawnOffset.position)  ,nextUnit.transform.rotation)as GameObject;
 					unit.GetComponent<UnitPathfinding>().destanation = enemyBase;//the base now tells the unit where to walk
 				}
 			}
@@ -36,7 +38,7 @@ public class Base : MonoBehaviour
 
 	GameObject getNextUnit(int x, int z)
 	{
-		if (unitIndexes [x, z] != empty)//so we dont go over the array bounds
+		if (unitIndexes [x, z] != empty)
 		{
 			return unitPrefabManager.getPrefab (unitIndexes [x, z], null);
 		}
@@ -61,17 +63,24 @@ public class Base : MonoBehaviour
 		int x = Mathf.RoundToInt(cell.x * (sizeX -1)); //-1 because 1* size x will be out of the array bounds
 		int y = Mathf.RoundToInt(cell.y * (sizeZ -1));
 		baseUi.drawSelected (getGridWorld(x, y));
+		print (getGridWorld(x, y)+ "x: "+x+"y: "+y);
 		if (unitIndexes [x, y] == empty) 
 		{
-			unitIndexes [(int)cell.x, (int)cell.y] = selectedUnit;
-			print ("unit added at: X:"+x + "Y: "+y);
+			unitIndexes [x, y] = selectedUnit; //to alow for bigger units make a place unit on grid function
+			print ("unit added at: X:"+(int)x + "Y: "+(int)y);
 		}
 	}
 	Vector3 getGridWorld(int x, int y)
 	{
-		x = x / sizeX;
-		y = y / sizeZ;
 
-		return gridManager.worldAtRatio (new Vector2 (x,y));
+		float _x = (float)x/ (float)sizeX;
+		float _y = (float)y/ (float)sizeZ;
+		return gridManager.worldAtRatio (new Vector2 (_x,_y));
+	}
+	Vector3 getGridWorld(int x, int y,Vector3 offset)
+	{
+		float _x = (float)x/ (float)sizeX;
+		float _y = (float)y/ (float)sizeZ;
+		return gridManager.worldAtRatio (new Vector2 (_x,_y),offset);
 	}
 }
