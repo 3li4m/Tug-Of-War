@@ -16,7 +16,7 @@ public class GridManager : MonoBehaviour
 			if (hitInfo.collider == myGrid) {//if we hit the correct grid
 				Vector3 localCoord = hitInfo.point - myGrid.transform.position;
 				myBase.addUnit(getRatioFormLocal(localCoord));
-
+				//print(getRatioFormLocal(localCoord).ToString());
 
 			}
 		} 
@@ -25,8 +25,8 @@ public class GridManager : MonoBehaviour
 
 	Vector2 getRatioFormLocal(Vector3 local)
 	{
-		float localX = local.x;
-		float localZ = local.z;
+		float localX = local.x + 0.5f;
+		float localZ = local.z + 0.5f;
 
 		//offet to the bottom left
 
@@ -35,7 +35,9 @@ public class GridManager : MonoBehaviour
 
 		localX = localX / myGrid.bounds.size.x;
 		localZ = localZ / myGrid.bounds.size.z;
-		return new Vector3 (localX, localZ);
+
+
+		return new Vector2 (localX, localZ);
 
 	}
 
@@ -47,7 +49,6 @@ public class GridManager : MonoBehaviour
 
 		ratio.x -= myGrid.bounds.extents.x;
 		ratio.y -= myGrid.bounds.extents.z;
-		print(new Vector3 (ratio.x, 0, ratio.y));
 		return new Vector3 (ratio.x, 0, ratio.y) + myGrid.transform.position; //may not be 0 we will see
 	}
 

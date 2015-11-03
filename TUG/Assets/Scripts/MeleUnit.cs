@@ -24,7 +24,7 @@ public class MeleUnit : BaseUnit
 		}
 	}
 	
-	private void OnCollisionEnter(Collision other)
+	private void OnCollisionEnter(Collision other) //cant use collision events needs refactoring
 	{
 		attackOnCollision(other);
 	}

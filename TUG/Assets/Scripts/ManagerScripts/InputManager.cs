@@ -6,7 +6,7 @@ public class InputManager : MonoBehaviour
 	public GridManager gManager;
 	void Update()
 	{
-		if (Input.GetKey (KeyCode.Mouse0)) 
+		if (Input.GetKeyDown (KeyCode.Mouse0)) 
 		{
 			gManager.checkCell();
 		}

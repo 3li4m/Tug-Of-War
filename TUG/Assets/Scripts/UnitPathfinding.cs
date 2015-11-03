@@ -11,16 +11,23 @@ public class UnitPathfinding : MonoBehaviour
 	private BaseUnit myBase;
 	public BaseUnit agrodUnit;
 	public float walkRange;
+	private readonly float unitUpateRate =5f;
 	
+
 	void Start()
 	{
 		myBase = GetComponent<BaseUnit>();
 		myNavmeshAgent = GetComponent<NavMeshAgent>();
+		StartCoroutine(brainLoop());
     }
 	
-	void Update () 
+	IEnumerator brainLoop () 
 	{
-		move();
+		while(gameObject.activeSelf == true)
+		{
+			move();
+			yield return new WaitForSeconds(unitUpateRate);
+		}
 	}
 	
 	void move()
@@ -57,15 +64,14 @@ public class UnitPathfinding : MonoBehaviour
 		}
 
 	}
-	
-	void OnTriggerEnter(Collider other)
+
+	void OnTriggerEnter(Collider other) //this needs to be flocked as rigidbodys on all units will tank store when the wave is spawned then check them as a whole
 	{
 		changeTarget(other);
 	}
 	
-	void OnTriggerStay(Collider other)
+	void OnTriggerStay(Collider other)//same as above
 	{
 		changeTarget(other);
 	}
-	
 }

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-
 public class Base : MonoBehaviour 
 {
 	public int sizeX =5, sizeZ =5;
@@ -20,7 +19,7 @@ public class Base : MonoBehaviour
 		unitPrefabManager = UnitPrefabManager.getPrefabManager ();
 		initalizeUnits ();
 	}
-	private void spawnWave()
+	private void spawnWave() //causes slight fps lag
 	{
 		for (int z=0; z < sizeZ; z++) 
 		{
@@ -60,14 +59,15 @@ public class Base : MonoBehaviour
 	}
 	public void addUnit(Vector2 cell)//an economy class should be between here and acutaly modifying the grid
 	{								//aditionaly there is no current selected unit option
-		int x = Mathf.RoundToInt(cell.x * (sizeX -1)); //-1 because 1* size x will be out of the array bounds
-		int y = Mathf.RoundToInt(cell.y * (sizeZ -1));
+		int x = Mathf.RoundToInt(cell.x * (float)sizeX); 
+		int y = Mathf.RoundToInt(cell.y * (float)sizeZ);
 		baseUi.drawSelected (getGridWorld(x, y));
-		print (getGridWorld(x, y)+ "x: "+x+"y: "+y);
+
+		x -= 1; //arrays start at 0 so shift the value from 1 to 0 10 to 9 ect
+		y -=1 ; 
 		if (unitIndexes [x, y] == empty) 
 		{
 			unitIndexes [x, y] = selectedUnit; //to alow for bigger units make a place unit on grid function
-			print ("unit added at: X:"+(int)x + "Y: "+(int)y);
 		}
 	}
 	Vector3 getGridWorld(int x, int y)
