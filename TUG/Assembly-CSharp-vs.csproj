@@ -47,21 +47,20 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BasePlacementUi.cs" />
-     <Compile Include="Assets\Scripts\BaseUnit.cs" />
-     <Compile Include="Assets\Scripts\DamagableEntity.cs" />
-     <Compile Include="Assets\Scripts\Editor Scripts\ApplyColliders.cs" />
-     <Compile Include="Assets\Scripts\Editor Scripts\ApplyRigidbodies.cs" />
-     <Compile Include="Assets\Scripts\LoadGameScene.cs" />
+     <Compile Include="Assets\Scripts\Fracturing\Rebuild.cs" />
+     <Compile Include="Assets\Scripts\Fracturing\RebuildMaster.cs" />
      <Compile Include="Assets\Scripts\ManagerScripts\GridManager.cs" />
      <Compile Include="Assets\Scripts\ManagerScripts\InputManager.cs" />
      <Compile Include="Assets\Scripts\ManagerScripts\UnitPrefabManager.cs" />
      <Compile Include="Assets\Scripts\ManagerScripts\WaveManager.cs" />
-     <Compile Include="Assets\Scripts\MeleUnit.cs" />
      <Compile Include="Assets\Scripts\Structures\Base.cs" />
-     <Compile Include="Assets\Scripts\Test Scripts\DestroyOnContact.cs" />
-     <Compile Include="Assets\Scripts\Test Scripts\MouseShoot.cs" />
-     <Compile Include="Assets\Scripts\Test Scripts\Rebuild.cs" />
-     <Compile Include="Assets\Scripts\Test Scripts\RebuildMaster.cs" />
+     <Compile Include="Assets\Scripts\UnitClasses\AttackingCooldownUnit.cs" />
+     <Compile Include="Assets\Scripts\UnitClasses\AttackingUnit.cs" />
+     <Compile Include="Assets\Scripts\UnitClasses\BaseUnit.cs" />
+     <Compile Include="Assets\Scripts\UnitClasses\DamagableEntity.cs" />
+     <Compile Include="Assets\Scripts\UnitClasses\MeleUnit.cs" />
+     <Compile Include="Assets\Scripts\UnitClasses\RangedUnit.cs" />
+     <Compile Include="Assets\Scripts\UnitClasses\TargetedProjectile.cs" />
      <Compile Include="Assets\Scripts\UnitPathfinding.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class Base : MonoBehaviour 
+using UnityEngine.Networking;
+public class Base : NetworkBehaviour
 {
 	public int sizeX =5, sizeZ =5;
 	public const int empty =-1;
@@ -19,7 +20,7 @@ public class Base : MonoBehaviour
 		unitPrefabManager = UnitPrefabManager.getPrefabManager ();
 		initalizeUnits ();
 	}
-	private void spawnWave() //causes slight fps lag
+	private void spawnWave() 
 	{
 		for (int z=0; z < sizeZ; z++) 
 		{
@@ -29,6 +30,8 @@ public class Base : MonoBehaviour
 				if(nextUnit != null)
 				{
 					GameObject unit = Instantiate(nextUnit,getGridWorld(x,z,spawnOffset.position)  ,nextUnit.transform.rotation)as GameObject;
+					//GameObject unit = NetworkServer.Spawn(nextUnit);
+					//unit.transform.position = 
 					unit.GetComponent<UnitPathfinding>().destanation = enemyBase;//the base now tells the unit where to walk
 				}
 			}

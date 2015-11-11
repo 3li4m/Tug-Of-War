@@ -9,7 +9,7 @@ public class WaveManager : MonoBehaviour //ALL static events will be contained w
 	private bool gameRunning = true;//when this is turned off the bases will stop spawning
 
 	public float unitSpawnRate;//inspector variable
-	private float unitSpawnRateLocal;//real local variable
+	private float unitSpawnRateLocal;//local variable
 
 	private void Start()
 	{

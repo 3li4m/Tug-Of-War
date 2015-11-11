@@ -1,18 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitPathfinding.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UnitClasses\RangedUnit.cs">
     <Files>
-      <File FileName="Assets\Scripts\UnitPathfinding.cs" Line="43" Column="5" />
-      <File FileName="Assets\Scripts\Structures\Base.cs" Line="56" Column="30" />
-      <File FileName="Assets\Scripts\BasePlacementUi.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ManagerScripts\GridManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ManagerScripts\InputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnitClasses\RangedUnit.cs" Line="12" Column="36" />
+      <File FileName="Assets\Scripts\UnitClasses\MeleUnit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnitClasses\BaseUnit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnitClasses\AttackingUnit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnitClasses\AttackingCooldownUnit.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnitClasses\TargetedProjectile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnitClasses\DamagableEntity.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UnitPathfinding.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="Assets\Scripts\UnitPathfinding.cs" line="16" offsetX="644" offsetY="254" expression="movePasses" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -12,7 +12,9 @@ public class UnitPathfinding : MonoBehaviour
 	public BaseUnit agrodUnit;
 	public float walkRange;
 	private readonly float unitUpateRate =5f;
-	
+
+	protected delegate void PathfindingEvent();
+	protected PathfindingEvent onInRange;
 
 	void Start()
 	{
@@ -41,6 +43,10 @@ public class UnitPathfinding : MonoBehaviour
 			else 
 			{
 				myNavmeshAgent.Stop();
+				if(onInRange != null)
+				{
+					onInRange();
+				}
 			}
 		}
 		else // if were not attacking anything 
