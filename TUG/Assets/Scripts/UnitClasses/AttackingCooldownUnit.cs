@@ -12,6 +12,7 @@ public abstract class AttackingCooldownUnit : AttackingUnit
 	{
 		if(canFire)
 		{
+			//print (this +"fired");
 			fire(target);
 			StartCoroutine(waitOnCooldown());
 		}

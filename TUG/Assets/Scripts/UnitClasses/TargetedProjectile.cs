@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class TargetedProjectile : MeleUnit
@@ -21,7 +21,7 @@ public class TargetedProjectile : MeleUnit
 
 		if(Vector3.Distance(target.transform.position, transform.position) < detonationRange)
 		{
-			attack(target);
+			fire(target);
 			die ();
 		}
 

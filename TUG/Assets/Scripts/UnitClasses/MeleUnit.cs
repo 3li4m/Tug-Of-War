@@ -2,11 +2,10 @@
 using System.Collections;
 
 
-public class MeleUnit : AttackingUnit
+public class MeleUnit : AttackingCooldownUnit
 {
-
-	//add cooldown
-	public override void attack (DamagableEntity enemy)
+	
+	protected override void fire (DamagableEntity enemy)
 	{
 		enemy.takeDmg(attackDmg);//the meles implimentation of attack
 	}
@@ -25,7 +24,8 @@ public class MeleUnit : AttackingUnit
 	{
 		if (!checkTeam (otherUnit))//checks if its not on your team
 		{
-			attack (otherUnitDamage);//passes it to the attack function
+			//attack (otherUnitDamage);//passes it to the attack function
+			attack(otherUnitDamage);
 		}
 	}
 	
