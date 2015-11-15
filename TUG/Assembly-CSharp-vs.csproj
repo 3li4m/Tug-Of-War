@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\ManagerScripts\UnitPrefabManager.cs" />
      <Compile Include="Assets\Scripts\ManagerScripts\WaveManager.cs" />
      <Compile Include="Assets\Scripts\Structures\Base.cs" />
+     <Compile Include="Assets\Scripts\UnitClasses\Ablility.cs" />
      <Compile Include="Assets\Scripts\UnitClasses\AttackingCooldownUnit.cs" />
      <Compile Include="Assets\Scripts\UnitClasses\AttackingUnit.cs" />
      <Compile Include="Assets\Scripts\UnitClasses\BaseUnit.cs" />
