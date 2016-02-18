@@ -7,6 +7,10 @@ public class Base : NetworkBehaviour
 	public const int empty =-1;
 
 	private int [,] unitIndexes;
+	public int[,] unitIndexDisplay
+	{
+		get{return unitIndexes;}
+	}
 	protected UnitPrefabManager unitPrefabManager;
 	public GridManager gridManager;
 	public Transform enemyBase;
@@ -16,9 +20,9 @@ public class Base : NetworkBehaviour
 
 	private void Start() //will add this bases spawn wave so it will be called every time the game manager deems necicary
 	{
-		WaveManager.findGameManager ().spawnUnits += spawnWave;
+		WaveManager.findGameManager().spawnUnits += spawnWave;
 		unitPrefabManager = UnitPrefabManager.getPrefabManager ();
-		initalizeUnits ();
+		initalizeUnits();
 	}
 	private void spawnWave() 
 	{
@@ -38,7 +42,7 @@ public class Base : NetworkBehaviour
 		}
 	}
 
-	GameObject getNextUnit(int x, int z)
+	public GameObject getNextUnit(int x, int z)
 	{
 		if (unitIndexes [x, z] != empty)
 		{
@@ -71,6 +75,7 @@ public class Base : NetworkBehaviour
 		if (unitIndexes [x, y] == empty) 
 		{
 			unitIndexes [x, y] = selectedUnit; //to alow for bigger units make a place unit on grid function
+			baseUi.onTileChanged(x,y,getGridWorld(x,y),getNextUnit(x,y));
 		}
 	}
 	Vector3 getGridWorld(int x, int y)
